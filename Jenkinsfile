@@ -58,7 +58,7 @@ pipeline {
                 }
             }
         }
-*/
+
         stage('Liquibase') {
             steps {
                 dir("liquibase/"){
@@ -66,7 +66,7 @@ pipeline {
                 }
             }
         }
-
+*/
         stage('Deploy service') {
             steps {
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker_nexus', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
