@@ -52,7 +52,7 @@ class PingUsersSimulation extends Simulation {
       )
     val getUsers =
       exec(http("GetUsers")
-        .get("/stress/users")
+        .get("/microservicio/users")
         .headers(headers_10)
         .check(status.is(200))
       )
@@ -61,7 +61,7 @@ class PingUsersSimulation extends Simulation {
   val scn = scenario("GetPing")
     .exec(
       BusinessLogic.getPing,
-      //BusinessLogic.getUsers
+      BusinessLogic.getUsers
     )
 
   setUp(
