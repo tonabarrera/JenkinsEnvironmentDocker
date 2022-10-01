@@ -16,7 +16,7 @@ pipeline {
                 }
             }
         }
-        
+
         stage('Analize') {
             steps {
                 dir("Curso-Microservicios/"){
@@ -34,7 +34,7 @@ pipeline {
                 }
             }
         }
-
+/*
         stage('Build') {
             steps {
                 dir("Curso-Microservicios/"){
@@ -52,5 +52,6 @@ pipeline {
                 }
             }
         }
+        */
     }
 }
