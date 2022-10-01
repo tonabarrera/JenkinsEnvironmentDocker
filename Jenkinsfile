@@ -3,8 +3,9 @@ pipeline {
     tools {
         maven 'M3_8_6'
     }
-    /*
+    
     stages {
+        /*
         stage('Dependency Check') {
             steps {
                 dir("Curso-Microservicios/"){
