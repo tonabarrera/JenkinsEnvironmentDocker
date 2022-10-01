@@ -61,7 +61,7 @@ class PingUsersSimulation extends Simulation {
   val scn = scenario("GetPing")
     .exec(
       BusinessLogic.getPing,
-      BusinessLogic.getUsers
+      //BusinessLogic.getUsers
     )
 
   setUp(
