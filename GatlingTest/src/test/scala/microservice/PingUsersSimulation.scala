@@ -46,7 +46,7 @@ class PingUsersSimulation extends Simulation {
     
     val getPing =
       exec(http("GetPing")
-        .get("microservicio/ping")
+        .get("/microservicio/ping")
         .headers(headers_10)
         .check(status.is(200))
       )
