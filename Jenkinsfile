@@ -34,7 +34,7 @@ pipeline {
                 }
             }
         }
-/*
+
         stage('Build') {
             steps {
                 dir("Curso-Microservicios/"){
@@ -52,6 +52,6 @@ pipeline {
                 }
             }
         }
-        */
+        
     }
 }
