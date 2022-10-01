@@ -16,6 +16,7 @@ pipeline {
                 }
             }
         }
+        
         stage('Analize') {
             steps {
                 dir("Curso-Microservicios/"){
