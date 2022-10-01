@@ -17,7 +17,7 @@ pipeline {
                 }
             }
         }
-
+*/
         stage('Analize') {
             steps {
                 dir("Curso-Microservicios/"){
@@ -35,7 +35,7 @@ pipeline {
                 }
             }
         }
-
+/*
         stage('Build') {
             steps {
                 dir("Curso-Microservicios/"){
@@ -52,8 +52,8 @@ pipeline {
                     sh "docker push 192.168.100.5:8083/repository/docker-private/microservicio:latest"
                 }
             }
-        }*/
-
+        }
+*/
         stage('Liquibase') {
             steps {
                 dir("liquibase/"){
