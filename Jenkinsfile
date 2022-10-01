@@ -3,6 +3,7 @@ pipeline {
     tools {
         maven 'M3_8_6'
     }
+    /*
     stages {
         stage('Dependency Check') {
             steps {
@@ -49,6 +50,14 @@ pipeline {
                     sh "docker login -u $USERNAME -p $PASSWORD 192.168.100.5:8083"
                     sh "docker tag microservicio:latest 192.168.100.5:8083/repository/docker-private/microservicio:latest"
                     sh "docker push 192.168.100.5:8083/repository/docker-private/microservicio:latest"
+                }
+            }
+        }*/
+
+        stage('Liquibase') {
+            steps {
+                dir("liquibase/"){
+                    sh '/opt/liquibase/liquibase --changeLogFile="changesets/db.changelog-master.xml" update'
                 }
             }
         }
